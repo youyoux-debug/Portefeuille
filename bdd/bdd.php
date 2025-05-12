@@ -3,7 +3,7 @@
 try{
 
 	$user = "root";
-	$pass = "root";
+	$pass = "";
 	$bdd = new PDO('mysql:host=localhost;dbname=portefeuille', $user, $pass);
 
 }catch(PDOException $e){
