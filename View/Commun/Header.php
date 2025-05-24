@@ -22,7 +22,7 @@
 						<ul>
 							<li><a href="index.php?page=accueil">Accueil</a></li>
 							<li><a href="index.php?page=portefeuille">Compte</a></li>
-							<li><a href="index.php?page=depense">Liste des Dépenses</a></li>
+							<li><a href="index.php?page=depense">Dépense</a></li>
 							        <?php
                         if (isset($_SESSION['user'])) {
                                     ?>

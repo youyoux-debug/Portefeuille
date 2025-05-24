@@ -19,7 +19,7 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Nos idéologie</h2>
+									<h2>Nos idéologies</h2>
 								</header>
 								<ul class="features">
 									<li>
