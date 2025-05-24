@@ -1,3 +1,4 @@
+                        <br>
                         <!-- Table -->
 									<section>
 										<h2>Liste des Dépenses :</h2>
