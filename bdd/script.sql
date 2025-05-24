@@ -24,3 +24,12 @@ CREATE TABLE portefeuille (
     FOREIGN KEY (depense_id) REFERENCES depense(id),
     FOREIGN KEY (categorie_id) REFERENCES categorie(id)
 );
+
+CREATE TABLE Utilisateur(
+    ID_Utilisateur INT NOT NULL AUTO_INCREMENT,
+    Nom VARCHAR(100) NOT NULL,
+    Prenom VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Mdp VARCHAR(100) NOT NULL,
+    PRIMARY KEY (ID_Utilisateur)
+);

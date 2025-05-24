@@ -26,7 +26,7 @@ class Utilisateur{
         $hashMdp = sha1($password);
 
         $req = $this->bdd->prepare("SELECT * FROM Utilisateur WHERE Email=:email AND Mdp=:mdp");
-        $req->blidParam(':email', $email);
+        $req->bindParam(':email', $email);
         $req->bindParam(':mdp', $hashMdp);
 
         $req->execute();
