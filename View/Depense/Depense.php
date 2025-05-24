@@ -41,3 +41,35 @@
 											</table>
 										</div>
 									</section>
+<center>
+<div class="container mt-4">
+    <h1 class="text-center">Ajouter une dépense</h1>
+
+    <div class="w-50 mx-auto p-4 border rounded bg-light shadow">
+        <form action="controller/livre/admin.php" method="POST">
+            <div class="mb-3">
+                <label for="titre" class="form-label">Montant</label>
+                <input type="text" class="form-control" id="titre" name="titre" placeholder="Entrez le titre" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="categorie_id" class="form-label">Catégorie</label>
+                <select name="categorie_id" id="categorie_id" class="form-control" required>
+                    <?php foreach($categories as $categorie){ ?>
+                        <option value="<?php echo $categorie['id']; ?>">
+                            <?php echo $categorie['libelle']; ?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <button type="submit" name="valider" class="btn btn-primary w-100">Valider</button>
+        </form>
+    </div>
+</div>
+</center>

@@ -35,6 +35,5 @@
                             <li><a href="index.php?page=login">Login</a></li>
 						</ul>
 					</nav>
-
 				<!-- Main -->
 					<div id="main">

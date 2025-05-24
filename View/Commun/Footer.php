@@ -1,6 +1,5 @@
 <br>
 </div>
-
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
