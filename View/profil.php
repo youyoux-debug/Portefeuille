@@ -16,8 +16,8 @@
 </div>
 
 <?php
-include('../controller/utilisateurModele.php');
-include('../controller/SelectUser.php')
+include('Controller/Utilisateur/UtilisateurController.php');
+include('Controller/Utilisateur/SelectUtilisateurs.php')
 ?>
 <h1>Page Liste utilisateurs</h1>
 
