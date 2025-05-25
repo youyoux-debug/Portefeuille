@@ -7,7 +7,7 @@
     <h2>Nom : <?php echo $_SESSION['user']['Nom']; ?></h2>
     <h2>Prénom : <?php echo $_SESSION['user']['Prenom']; ?></h2>
     <h2>
-        <?php echo $_SESSION['user']['Email']; ?> 
+        Email : <?php echo $_SESSION['user']['Email']; ?> 
     </h2>
 <?php
     }
