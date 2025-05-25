@@ -1,11 +1,16 @@
 
 
 						<!-- Introduction -->
+						 <?php
+    						if (isset($_SESSION['user'])) {
+						?>
 							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Bienvenue Utilisateur</h2>
+											<h1>Bienvenue
+        										<?php echo $_SESSION['user']['Prenom']['Nom']; ?> 
+    										</h1>
 										</header>
 										<p>Voici votre espace auquel vous pouvez visionner votre compte bancaire.</p>
 										<ul class="actions">
@@ -15,6 +20,9 @@
 									<span class="image"><img src="assets/img/logo Stellar.jpg" alt="" /></span>
 								</div>
 							</section>
+							<?php
+    							}
+							?>
 
 						<!-- First Section -->
 							<section id="first" class="main special">
