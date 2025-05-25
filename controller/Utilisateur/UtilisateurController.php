@@ -1,7 +1,7 @@
 <?php
 
-include("Model/UtilisateurModel.php");
-include("bdd/bdd.php");
+include("../Model/UtilisateurModel.php");
+include("../bdd/bdd.php");
 
 if(isset($_POST['action'])){
 
@@ -31,7 +31,7 @@ class UtilisateurController{
     public function create(){
 
         $this->Utilisateur->ajouterUtilisateur($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['password']);
-        header('Location:http:/127.0.0.1/portefeuille');
+        header('Location:http://127.0.0.1/Portefeuille');
     }
 
     public function login(){
@@ -42,7 +42,7 @@ class UtilisateurController{
             session_start();
             $_SESSION['user'] = $user;
 
-            header('Location:http:/127.0.0.1/portefeuille');
+            header('Location:http://127.0.0.1/Portefeuille');
         }
     }
 }

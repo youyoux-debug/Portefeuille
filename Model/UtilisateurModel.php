@@ -34,7 +34,7 @@ class Utilisateur{
         return $req->fetch();
     }
 
-    public function listeUtilisatuers(){
+    public function listeUtilisateurs(){
 
         $req = $this->bdd->prepare("SELECT * FROM Utilisateur");
 

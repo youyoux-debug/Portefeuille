@@ -1,7 +1,7 @@
 <div>
     <h1>Inscription</h1>
 
-    <form action="controller/Utilisateur/utilisateurController.php" method="POST">
+    <form action="controller/Utilisateur/UtilisateurController.php" method="POST">
 
     <label>Nom</label>
     <input type="text" name="nom"><br>

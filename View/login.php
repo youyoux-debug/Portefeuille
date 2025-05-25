@@ -1,7 +1,7 @@
 <div>
     <h1>Connecter</h1>
 
-    <form action="controller/Utilisateur/utilisateurController.php" method="POST">
+    <form action="controller/Utilisateur/UtilisateurController.php" method="POST">
 
         <label>Email</label>
         <input type="email" name="email"><br>
