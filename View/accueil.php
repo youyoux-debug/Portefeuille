@@ -9,7 +9,7 @@
 									<div class="content">
 										<header class="major">
 											<h1>Bienvenue
-        										<?php echo $_SESSION['user']['Prenom']['Nom']; ?> 
+        										<?php echo $_SESSION['user']['Prenom']; ?> 
     										</h1>
 										</header>
 										<p>Voici votre espace auquel vous pouvez visionner votre compte bancaire.</p>
