@@ -1,7 +1,7 @@
 <?php
 
-include("../Model/UtilisateurModel.php");
-include("../bdd/bdd.php");
+include("../../Model/UtilisateurModel.php");
+include("../../bdd/bdd.php");
 
 if(isset($_POST['action'])){
 
