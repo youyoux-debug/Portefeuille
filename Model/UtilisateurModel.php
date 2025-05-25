@@ -12,7 +12,7 @@ class Utilisateur{
     public function ajouterUtilisateur($nom, $prenom, $email, $mdp){
 
         $hashpassword = sha1($mdp);
-        $req = $this->bdd->prepare("INSERT INTO Utilisateur(Nom, Prenom, Email, Mdp) VALUES (:nom, :prenom, :email, :mdp");
+        $req = $this->bdd->prepare("INSERT INTO utilisateur(Nom, Prenom, Email, Mdp) VALUES (:nom, :prenom, :email, :mdp)");
         $req->bindParam(':nom', $nom);
         $req->bindParam(':prenom', $prenom);
         $req->bindParam(':email', $email);
@@ -25,7 +25,7 @@ class Utilisateur{
 
         $hashMdp = sha1($password);
 
-        $req = $this->bdd->prepare("SELECT * FROM Utilisateur WHERE Email=:email AND Mdp=:mdp");
+        $req = $this->bdd->prepare("SELECT * FROM utilisateur WHERE Email=:email AND Mdp=:mdp");
         $req->bindParam(':email', $email);
         $req->bindParam(':mdp', $hashMdp);
 
@@ -36,7 +36,7 @@ class Utilisateur{
 
     public function listeUtilisateurs(){
 
-        $req = $this->bdd->prepare("SELECT * FROM Utilisateur");
+        $req = $this->bdd->prepare("SELECT * FROM utilisateur");
 
         $req->execute();
         
