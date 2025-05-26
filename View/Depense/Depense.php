@@ -60,8 +60,10 @@
             <div class="mb-3">
                 <label for="categorie_id" class="form-label">Catégorie</label>
                 <select name="categorie_id" id="categorie_id" class="form-control" required>
-                    <?php foreach($categories as $categorie){ ?>
-                        <option value="<?php echo $categorie['id']; ?>">
+                    <?php 
+						include("controller/Categorie/SelectCat.php");
+						foreach($categories as $categorie){ ?>
+                        <option value="<?php echo $categorie['categorie_id']; ?>">
                             <?php echo $categorie['libelle']; ?>
                         </option>
                     <?php } ?>
