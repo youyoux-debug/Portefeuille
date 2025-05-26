@@ -63,7 +63,7 @@
                     <?php 
 						include("controller/Categorie/SelectCat.php");
 						foreach($categories as $categorie){ ?>
-                        <option value="<?php echo $categorie['categorie_id']; ?>">
+                        <option value="<?php echo $categorie['id']; ?>">
                             <?php echo $categorie['libelle']; ?>
                         </option>
                     <?php } ?>
