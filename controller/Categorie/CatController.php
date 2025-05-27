@@ -1,5 +1,5 @@
 <?php
-require_once('Model/Categorie.php');
+require_once('Model/CategorieModel.php');
 
 class CategorieController {
     private $categorieModel;

@@ -1,5 +1,5 @@
 <?php
-require_once('/Model/Portefeuille.php');
+require_once('Model/PortefeuilleModel.php');
 
 class PortefeuilleController {
     private $portefeuilleModel;
