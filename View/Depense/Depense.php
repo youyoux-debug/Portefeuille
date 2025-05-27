@@ -1,8 +1,7 @@
-                        <br>
 <?php
-// Inclure le contrôleur des dépenses
-include('Controller/Depense/DepenseController.php');
+// Inclure le contrôleur des dépenses et la connexion BDD
 include('bdd/bdd.php');
+include('Controller/Depense/DepenseController.php');
 
 // Instancier le contrôleur
 $depenseController = new DepenseController($bdd);
@@ -14,7 +13,18 @@ if (isset($_POST['ajouter_depense'])) {
     $date = $_POST['date'];
     $moyendepaie = $_POST['moyendepaie'];
     
+    // Ajouter la dépense
     $depenseController->ajouter($montant, $libelle, $date, $moyendepaie);
+    
+    // Déduire le montant du portefeuille (virement négatif)
+    include('Controller/Portefeuille/PortefeuilleController.php');
+    $portefeuilleController = new PortefeuilleController($bdd);
+    
+    // Créer une transaction négative dans le portefeuille
+    $montant_negatif = -abs($montant); // S'assurer que le montant est négatif
+    $categorie_id = 1; // Vous pouvez adapter selon vos besoins ou récupérer depuis le formulaire
+    
+    $portefeuilleController->ajouter($montant_negatif, null, $categorie_id, $date);
 }
 
 // Traitement des actions (supprimer, etc.)

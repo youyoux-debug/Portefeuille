@@ -33,17 +33,17 @@
 									<li>
 										<span class="icon solid major style1 fa-code"></span>
 										<h3>Excellent en Sécurité</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<p>La banque Stellar est moderne, accessible et reconnue pour son excellente sécurité. Elle allie technologie, simplicité et confiance au service de ses clients.</p>
 									</li>
 									<li>
 										<span class="icon major style3 fa-copy"></span>
 										<h3>Des Actions Rapides</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<p>Grâce à ses actions rapides, les clients peuvent gérer leur argent en quelques clics, en toute sécurité.</p>
 									</li>
 									<li>
 										<span class="icon major style5 fa-gem"></span>
 										<h3>Une Bonne Expérience</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<p>Une banque moderne qui offre une excellente expérience client grâce à des services simples, rapides et accessibles.</p>
 									</li>
 								</ul>
 							</section>

@@ -81,7 +81,7 @@ $solde_total = $solde['solde'] ?? 5000; // 5000 par défaut si aucune donnée
 
 <!-- Formulaire d'ajout au portefeuille -->
 <section>
-    <h2>Ajouter une transaction au portefeuille :</h2>
+    <h2>Enregister une entrée au portefeuille :</h2>
     <center>
         <div class="container mt-4">
             <div class="w-50 mx-auto p-4 border rounded bg-light shadow">
@@ -127,6 +127,60 @@ $solde_total = $solde['solde'] ?? 5000; // 5000 par défaut si aucune donnée
                     </div>
 
                     <button type="submit" name="ajouter_portefeuille" class="btn btn-primary w-100">Ajouter au portefeuille</button>
+                </form>
+            </div>
+        </div>
+    </center>
+</section>
+
+<!-- Formulaire de virement (retrait d'argent) -->
+<section>
+    <h2>Enregistrer une dépense :</h2>
+    <center>
+        <div class="container mt-4">
+            <div class="w-50 mx-auto p-4 border rounded bg-light shadow">
+                <form action="" method="POST">
+                    <div class="mb-3">
+                        <label for="montant" class="form-label">Montant à retirer</label>
+                        <input type="number" step="0.01" class="form-control" id="montant" name="montant" placeholder="Entrez le montant à retirer" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="depense_id" class="form-label">Dépense</label>
+                        <select name="depense_id" id="depense_id" class="form-control">
+                            <option value="">Sélectionner une dépense (optionnel)</option>
+                            <?php 
+                            $depenses = $depenseController->afficherListe();
+                            foreach($depenses as $depense): ?>
+                                <option value="<?php echo $depense['id']; ?>">
+                                    <?php echo htmlspecialchars($depense['libelle']); ?> (<?php echo $depense['montant']; ?>€)
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="categorie_id" class="form-label">Catégorie</label>
+                        <select name="categorie_id" id="categorie_id" class="form-control" required>
+                            <option value="">Sélectionner une catégorie</option>
+                            <?php 
+                            $req_cat = $bdd->prepare("SELECT * FROM categorie");
+                            $req_cat->execute();
+                            $categories = $req_cat->fetchAll(PDO::FETCH_ASSOC);
+                            foreach($categories as $categorie): ?>
+                                <option value="<?php echo $categorie['id']; ?>">
+                                    <?php echo htmlspecialchars($categorie['libelle']); ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" name="date" value="<?php echo date('Y-m-d'); ?>" required>
+                    </div>
+
+                    <button type="submit" name="ajouter_portefeuille" class="btn btn-primary w-100">Effectuer le virement</button>
                 </form>
             </div>
         </div>
